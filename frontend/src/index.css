@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: #5C4033; /* wood.DEFAULT */
+    background-color: #FAF7F0; /* sandalwood.light */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', 'Playfair Display', serif;
+  }
+
+  /* Custom scrollbar matching sandalwood and gold theme */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #FAF7F0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 5px;
+    border: 2px solid #FAF7F0;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B39127;
+  }
+}
+
+@layer components {
+  /* Dynamic Traditional Kolam Background Pattern */
+  .kolam-pattern {
+    background-color: #FAF7F0;
+    background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px), radial-gradient(#D4AF37 0.5px, #FAF7F0 0.5px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.05;
+  }
+
+  /* Authentic Sandalwood soft noise/texture overlay */
+  .sandalwood-texture {
+    background-color: #F5F2EB;
+    position: relative;
+  }
+  .sandalwood-texture::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3e%3cfilter id='noiseFilter'%3e%3cturbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3e%3c/filter%3e%3crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3e%3c/svg%3e");
+  }
+
+  /* Gold Traditional Border */
+  .gold-border {
+    border: 2px solid #D4AF37;
+    position: relative;
+  }
+  .gold-border::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    pointer-events: none;
+  }
+
+  /* Banana leaf shape clip-path */
+  .banana-leaf-clip {
+    clip-path: ellipse(50% 40% at 50% 50%);
+  }
+
+  /* Steam animation */
+  .steam-line {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to top, rgba(250, 249, 246, 0.8), transparent);
+    filter: blur(1px);
+    display: inline-block;
+  }
+}
+
+/* Page Loader styling */
+.loader-circle {
+  border-top-color: #D4AF37;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom Text Overlay Shadow for readability on Hero */
+.hero-text-shadow {
+  text-shadow: 2px 2px 8px rgba(92, 64, 51, 0.4), 0 0 20px rgba(250, 249, 246, 0.3);
+}
+
+/* Custom CSS to hide default HTML date icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: sepia(100%) saturate(200%) hue-rotate(3deg) brightness(80%);
+  cursor: pointer;
+}
