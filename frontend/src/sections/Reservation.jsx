@@ -5,6 +5,10 @@ import { Calendar, User, Phone, Users, Clock, MessageSquare, CheckCircle, AlertC
 import axios from 'axios';
 import confetti from 'canvas-confetti';
 
+const API_BASE_URL = import.meta.env.MODE === 'production' 
+  ? '' 
+  : 'http://localhost:5000';
+
 const Reservation = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
@@ -39,7 +43,7 @@ const Reservation = () => {
 
     try {
       // Post to backend Express server API
-      const response = await axios.post('http://localhost:5000/api/reservations', formData);
+      const response = await axios.post(`${API_BASE_URL}/api/reservations`, formData);
       
       if (response.data.success) {
         setSuccess(true);
