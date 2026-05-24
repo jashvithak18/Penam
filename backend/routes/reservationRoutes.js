@@ -7,7 +7,7 @@ const Reservation = require('../models/Reservation');
 // @access  Public
 router.post('/', async (req, res) => {
   try {
-    const { name, phone, guests, date, time, specialRequests } = req.req ? req.req.body : req.body;
+    const { name, phone, guests, date, time, specialRequests } = req.body;
     
     // Basic validation
     if (!name || !phone || !guests || !date || !time) {
