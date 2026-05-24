@@ -99,19 +99,19 @@ const Hero = () => {
 
         {/* Traditional Gold Ornamental Border Corner Accents */}
         <motion.div 
-          className="inline-block p-1 border border-gold/30 rounded mb-4"
+          className="inline-block p-1 border border-white/40 rounded mb-4"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="px-3.5 py-1.5 border border-gold/60 text-xs font-bold uppercase tracking-[0.25em] text-gold-light font-sans bg-wood/85 shadow-md">
+          <div className="px-4 py-2 border border-white/60 text-xs font-bold uppercase tracking-[0.25em] text-white font-['Times_New_Roman',_serif] bg-black/75 shadow-md">
             {t('hero.subtitle')}
           </div>
         </motion.div>
 
         {/* Brand Main Title */}
         <motion.h1 
-          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-[0.25em] bg-gradient-to-b from-gold-light via-gold to-gold-dark bg-clip-text text-transparent hero-text-shadow select-none mb-4 filter drop-shadow-[0_4px_8px_rgba(62,39,35,0.6)]"
+          className="text-6xl md:text-8xl lg:text-9xl font-black tracking-[0.25em] text-white select-none mb-4 font-['Times_New_Roman',_serif] filter drop-shadow-[0_6px_14px_rgba(0,0,0,0.95)]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -121,7 +121,7 @@ const Hero = () => {
 
         {/* Short Poetic Description */}
         <motion.p 
-          className="text-lg md:text-2xl font-sans font-bold text-cream max-w-2xl mx-auto mb-10 leading-relaxed hero-text-shadow filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+          className="text-lg md:text-2xl font-bold text-white max-w-2xl mx-auto mb-10 leading-relaxed font-['Times_New_Roman',_serif] filter drop-shadow-[0_3px_8px_rgba(0,0,0,0.95)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
