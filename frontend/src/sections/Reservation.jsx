@@ -246,7 +246,7 @@ const Reservation = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-gold hover:bg-gold-dark text-white font-bold tracking-wider uppercase py-4 rounded-md shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 border border-gold-light/20 hover:-translate-y-0.5"
+                    className="w-full bg-[#FC8019] hover:bg-[#e16d0c] text-white font-bold tracking-wider uppercase py-4 rounded-md shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 border border-[#FC8019]/20 hover:-translate-y-0.5"
                   >
                     {loading ? (
                       <>
